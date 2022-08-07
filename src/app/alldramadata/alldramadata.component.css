@@ -1,0 +1,15 @@
+.searchDiv{
+    border: 1px solid aqua;
+    height: 5rem;
+    height: 17rem;
+    margin-top: 3rem;
+    margin-left: 15rem;
+    display: flex;
+    background-color: white;
+    border-radius: 2rem;
+
+}
+
+.mainDiv :hover {
+	transform: scale(1.04);
+}

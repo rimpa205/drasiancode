@@ -1,0 +1,20 @@
+.nav-link.active {
+    background: transparent !important;
+    border-bottom: 2px solid blue !important;
+    border-radius: 0px !important;
+}
+
+.nav-link{
+    border:none
+}
+
+.header{
+    color: #2596be;
+    font-weight: 700;
+    font-size: xx-large;
+    margin-left: 1rem;
+}
+
+.mainDiv{
+    background-color: aliceblue;
+}

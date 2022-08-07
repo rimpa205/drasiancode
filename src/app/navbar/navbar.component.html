@@ -1,0 +1,75 @@
+<nav style="background-color: #2596be;" class="navbar navbar-expand-lg navbar-light ">
+    <a style="color:white" class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a  style="color:white" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a  style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort By
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Ranking </a>
+            <a class="dropdown-item" href="#">Popularity</a>
+            <!-- <div class="dropdown-divider"></div> -->
+            <a class="dropdown-item" href="#">Rating</a>
+            <a class="dropdown-item" href="#">Language</a>
+            <a class="dropdown-item" href="#">Language</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a style="color:white" class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <div style="display: flex;
+      margin-right: 13rem;">
+      <form  #myForm="ngForm" class="form-inline my-2 my-lg-0">
+        <input  [(ngModel)]="searchTerm" name="searchTerm" class="form-control mr-sm-2" type="search"  placeholder="Search" aria-label="Search">
+        <button (click)="onSubmitSearch(searchTerm)" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+      </form>
+
+      <li class="nav-item dropdown">
+        <a  style=  "color: white;
+        line-height: 34px;
+        width: 57px;
+        height: 57px;
+        border: 1px solid;
+        border-radius: 29px;
+        display: flex;
+        margin-left: 3rem;
+        position: relative;
+        top: -0.5rem;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         {{userName}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Messages </a>
+          <a class="dropdown-item" href="#">Friends</a>
+          <!-- <div class="dropdown-divider"></div> -->
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="#">MyWatchList</a>
+          <a class="dropdown-item" href="#">Airing Calendar</a>
+          <a class="dropdown-item" href="#">Feeds</a> 
+          <a class="dropdown-item" href="#">Personalised Recommendations</a>
+          <a class="dropdown-item" href="#">Custom List</a>
+          <a class="dropdown-item" href="#">Sign Out</a>
+        </div>
+      </li>
+      </div>
+    </div>
+  </nav>
+  <app-main-drama-dashboard></app-main-drama-dashboard>
+  <app-currently-airing-to-be-aired></app-currently-airing-to-be-aired>
+  <app-comments></app-comments>
+  
+ 
+
+ 
+

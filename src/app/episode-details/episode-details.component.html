@@ -1,0 +1,80 @@
+<!-- <p>episode-details works!</p> -->
+<div *ngIf="object" style="display: flex; border-bottom: 1px solid grey;">
+    <div *ngIf="object" class="col-md-4">
+        <div class="titlePoster mb-4">
+            <a target="_blank" rel="noreferrer">
+                <img class="image" alt={{object.name}} src={{object.backdrop_path}} />
+            </a>
+        </div>
+    </div>
+    <div style="margin-top:1rem" class="col-md-8">
+        <div *ngIf="object" class="shortInfo">
+            <div *ngIf="object" class="rating">
+                {{object.vote_average}}</div>
+            <div *ngIf="object" class="ratingsInfo">
+                <span class="spanClass">Your Rating: 0/10</span>
+                <span class="spanClass">Ratings: 8.6/10 from 9,660 users </span>
+                <span class="spanClass"># of Watchers: 20,</span>
+                <span class="spanClass">Reviews: 203 users</span>
+            </div>
+        </div>
+        <div *ngIf="object" class="longInfo">
+            {{object.overview}}
+            <div style="display: flex; margin-top:1rem">
+                <div *ngFor="let item of genres" class="longInfo genreButton">
+                    {{item.name}}
+                </div>
+            </div>
+            <div style="display: flex; margin-top:1rem">
+                <div *ngFor="let item of networks">
+
+                    <div>
+                        <img style="    width: 7rem;
+                margin-left: 5rem;" alt={{item.name}} src={{item.logo_path}} />
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="whereToWatch">
+
+</div>
+
+<div class="Reviews">
+
+</div>
+
+<div *ngIf="object && showBool" class="Recommendations">
+    <div style="display:flex;overflow-x: scroll;">
+        <div *ngFor="let item of recommendationArr">
+
+            <div *ngIf="object" class="recomDiv">
+                <a (click)="sendClickedDramaInfo(item)" routerLink="/singledramainfo" style="text-align: center;
+                margin-left: 1rem;
+                font-size: larger;
+                color: #2596be;
+                white-space: nowrap;"> {{item.name}}</a>
+                <div>
+                    <img style="width: 10rem;
+                    margin-left: 1.5rem;
+                    height: 14rem;
+                    margin-top:2rem;
+                    border-radius: 2rem;" alt={{item.name}} src={{item.backdrop_path}} />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="comments">
+
+</div>

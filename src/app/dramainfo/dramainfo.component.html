@@ -1,0 +1,64 @@
+<div class="TitleInfoComponent">
+    <div class="backdrop"  id ="backdrop"  [ngStyle]="{'background-color':'black'}"
+        ></div>
+    <div class="titleData">
+        <div class="titlePoster mb-4">
+           <a  target="_blank" rel="noreferrer"> 
+                <img alt={{titleInfo.name}} src={{titleInfo.backdrop_path}} />
+             </a> 
+        </div>
+        <div class="titleContent">
+            <div>
+                <h4>{{titleInfo.name}} <br /> {{(titleInfo.original_name !== titleInfo.name) ? titleInfo.original_name : ""}}</h4>
+            </div>
+            <div class="mt-4">
+                <h5>Rating: {{titleInfo.vote_average}}/10 
+                <h5>{{titleInfo.vote_count}} votes</h5>
+            <!-- </div> -->
+            <div class="mt-4">
+                <h5>
+                    
+                        <!-- <a key={{network.id}} href={{titleInfo.homepage !== "" ? titleInfo.homepage : "#"}} target={(titleInfo.homepage !== "") ? "_blank" : ""} rel="noreferrer"><img class="mr-4" alt={network.name} src={getNetwork(network.logo_path, "w92")}></img></a> -->
+                   
+                </h5>
+            </div>
+            <div class="mt-4">
+                <h5>Air Date: {{titleInfo.first_air_date}}</h5>
+            </div>
+            <div>
+                <h5>Episodes: {{titleInfo.number_of_episodes}}</h5>
+            </div>
+            <div class="mt-4">
+                <h5>Genres:
+                    {{titleInfo.genresArray}}
+                        <!-- titleInfo.genres.map((genre) => (
+                            genre.name + " • " -->
+                  
+                </h5>
+            </div>
+            <div>
+                <h5>Language: {{titleInfo.original_language}}</h5>
+            </div>
+            <div class="mt-4">
+                <h5>Overview:</h5><p>{{titleInfo.overview}}</p>
+            </div>
+            <div>
+                <h4 class="otherTitlesHeading">Recommendations:</h4>
+            </div>
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="otherTitles">
+     
+                <div key={index} class="otherTitlePoster mb-4">
+                    <Link to={`/title/${otherTitle.id}`}> -->
+                        <!-- <img alt={otherTitle.name} src={{title.backdrop_path}}  />
+                     </Link> -->
+                    <!-- <p class="mt-3"><b>{otherTitle.name} <br /> {(otherTitle.original_name !== otherTitle.name) ? otherTitle.original_name : ""}</b></p>
+       
+    </div> --> 
+<!-- </div> -->
+<div>
+    <div class="p-4 m-3">
+        <h5>Invalid Title ID!</h5>
+    </div>
+</div>

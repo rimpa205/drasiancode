@@ -1,0 +1,38 @@
+
+<div *ngIf="!titleInfo">
+    <input  style="    position: absolute;
+    right: 39rem;width: 28rem;height: 2rem;border-radius: 1rem;" (input)="handleSearch($event)" type=text placeholder="Search for dramas by genre or name">
+    
+</div>
+<div *ngIf="!titleInfo" >
+
+<div style="margin-top: 7rem;" class="search-results"
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="50"
+(scrolled)="onScroll()" *ngFor="let title of showDramaArr" class="titlesContainer">
+    
+            
+                <div (click)="showDrama(title)" class="titleInfo">
+                    <div class="titleName">
+                        <p><b style="color:blue">{{title.name}} <br />{{title.original_name !== title.name ? title.original_name : ""}}</b></p>
+                    </div>
+                    <div class="titleRating">
+                        <p style="color:blue">
+                             Rating: {{title.vote_average}}/10 </p>
+                           <p>Air Date: {{title.first_air_date}}</p>
+                        
+                    </div>
+                    <div class="titleThumbnail">
+                    <p><img alt={title.name} src={{title.backdrop_path}}></p> 
+                    </div>
+                </div>
+        
+</div>
+
+
+</div>
+
+<div *ngIf="titleInfo">
+ <app-dramainfo [titleInfo]="titleInfo"></app-dramainfo>
+</div>

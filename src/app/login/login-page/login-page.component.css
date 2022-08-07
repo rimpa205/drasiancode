@@ -1,0 +1,91 @@
+.titlesContainer,
+.filters,
+.search {
+    display: inline-table;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;;
+}
+
+.titleInfo {
+
+height: 23rem;
+	margin: 10px;
+	position: relative;
+	width: fit-content;
+	padding: 10px 20px;
+	background-color: black;
+	border-radius: 8%;
+	transition: transform 250ms ease-in-out;
+	z-index: 10;
+}
+
+.search-results {
+    height: 20rem;
+    overflow: scroll;
+  }
+
+.titleInfo img {
+    
+    width: 196px;
+    height: 225px;
+ border-radius: 20px;
+   
+}
+
+.titleInfo:hover {
+	transform: scale(1.02);
+}
+
+.TitleInfoComponent {
+	min-height: calc(100vh - 250px);
+}
+
+
+
+
+
+
+.container-fluid{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:100vh
+}
+
+.custom-card{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+}
+
+.horizontal-line-text{
+	width:100%;
+	text-align: center;
+	border-bottom: 1px solid #D8DDEC;
+	line-height: 0.1 rem;
+	margin:25px 0 30 px 0;
+
+}
+
+
+span{
+	background-color: white;
+	padding: 0 10px;
+}
+
+.google-sign-in{
+	background-color: white;
+	border:1 px solid #D8DDEC;
+	padding: 10px 30px;
+	text-align: center;
+	height:100%
+}
+
+img{
+	float: left;
+}
+
+span{
+	vertical-align: middle;
+}

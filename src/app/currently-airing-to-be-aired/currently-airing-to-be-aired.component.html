@@ -1,0 +1,36 @@
+<div  style=" margin-left: 16rem;
+padding: 2rem;
+border: 5px solid skyblue;
+border-radius: 3rem;
+margin-top: 3rem;" class="container">
+
+<p>currently-airing-to-be-aired works!</p>
+
+<div class="container">
+    <div  style= "padding:2rem" *ngFor = "let item of currentlyAiring | 
+    paginate: { itemsPerPage: 5, currentPage: page, totalItems:totalLength
+     }" class="row">
+        <div class="imgBox">
+            <img style ="width: 18rem;
+            border-radius: 2rem;" src={{item.backdrop_path}} />
+        </div>
+        <div class="dramaInfo">
+            <div class="dramaName">{{item.name}}</div>
+            <div class="dramaVote">{{item.vote_average}}</div>
+        </div>
+      
+    </div>
+    <!-- <div class="card-footer pb-0 pt-3">
+        <app-jw-pagination [items]="currentlyAiring" (changePage)="onChangePage($event)"></app-jw-pagination>
+    </div> -->
+    <!-- <div class="row">  
+        <div class="col-lg-8 col-md-10 ml-auto mr-auto">  
+             <div class="float-right"> 
+                 <app-pagination [totalRecords]="currentlyAiring.length" [recordsPerPage]="5"
+                  (onPageChange)="displayActivePage($event)"></app-pagination> 
+                </div>     
+        </div>  
+    </div>  -->
+    <pagination-controls (pageChange)="page=$event"></pagination-controls>
+</div>
+</div>

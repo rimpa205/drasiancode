@@ -1,0 +1,58 @@
+<div class="mainDiv">
+<div class="header" *ngIf="object">
+{{object.name}}
+</div>
+
+<!-- <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" [ngClass]="{ 'active':activeTab==='search'}" (click)="search('search')" >Details</a>
+     
+
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"  id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" [ngClass]="{ 'active':activeTab==='result'}" (click)="result('result')" >Episode Guide</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" [ngClass]="{ 'active':activeTab==='Reviews'}" (click)="Reviews('Reviews')">Reviews</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{ 'active':activeTab==='Recommendations'}" (click)="Recommendations('Recommendations')">Recommendations</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{ 'active':activeTab==='Photos'}" (click)="Photos('Photos')" >Photos</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">home tab</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">profile tab</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">contact tab</div>
+</div> -->
+
+<div style=" background-color: white;" class="container">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+          <a class="nav-link active" id="Details-tab" data-toggle="tab" href="#Details" role="tab" aria-controls="Details" aria-selected="true">Details</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="EG-tab" data-toggle="tab" href="#EG" role="tab" aria-controls="EG" aria-selected="false">Episode Guide</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="Reviews-tab" data-toggle="tab" href="#Reviews" role="tab" aria-controls="Reviews" aria-selected="false">Reviews</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="Recommendations-tab" data-toggle="tab" href="#Recommendations" role="tab" aria-controls="Recommendations" aria-selected="false">Recommendations</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="Photos-tab" data-toggle="tab" href="#Photos" role="tab" aria-controls="Photos" aria-selected="false">Photos</a>
+  </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="Details" role="tabpanel" aria-labelledby="Details-tab"><app-episode-details [object]="object"></app-episode-details></div>
+      <div class="tab-pane fade" id="EG" role="tabpanel" aria-labelledby="EG-tab">Episode Guide tab</div>
+      <div class="tab-pane fade" id="Reviews" role="tabpanel" aria-labelledby="Reviews-tab">Reviews tab</div>
+      <div class="tab-pane fade" id="Recommendations" role="tabpanel" aria-labelledby="Recommendations-tab">Recommendations tab</div>
+      <div class="tab-pane fade" id="Photos" role="tabpanel" aria-labelledby="Photos-tab">Photos tab</div>
+  </div>
+</div>
+</div>

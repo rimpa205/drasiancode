@@ -1,0 +1,75 @@
+.TitleInfoComponent {
+	min-height: calc(100vh - 250px);
+}
+
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	filter: brightness(25%);
+	z-index: 1;
+}
+
+.titlePoster {
+	width: 250px;
+}
+.titlePoster {
+	width: 250px;
+}
+
+.otherTitlePoster {
+	width: 150px;
+	margin: 0 20px;
+}
+
+ /* .titlePoster img,
+.otherTitlePoster img {
+	width: 100%;
+	border-radius: 20px;
+	transition: transform 250ms ease-in-out;
+}
+
+
+
+.titlePoster img:hover,
+.otherTitlePoster img:hover {
+	transform: scale(1.04);
+} */
+
+.titleContent {
+    font-family: cursive;    
+    margin-left: 95px;
+    text-align: left;
+    width: 50%;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.titlePoster img{
+    width: 18rem;
+    height: 27rem;
+    border-radius: 33px;
+    transition: transform 250ms ease-in-out;
+}
+
+
+.titleData,
+.otherTitles {
+	position: relative;
+	margin-top: 35px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: white;
+	z-index: 11;
+}
+
+.otherTitlesHeading {
+	margin-top: 40px;
+}
+
